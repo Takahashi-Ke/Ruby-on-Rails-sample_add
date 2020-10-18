@@ -1,1 +1,1 @@
-# Ruby-on-Rails-sample_add
+カリキュラム"Railsを学ぼう"のsample_addのソースコードです
