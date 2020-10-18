@@ -1,0 +1,15 @@
+<h1>新規投稿</h1>
+<%= form_with model:@list,url:'/todolists',local:true do |f| %>
+　<!-- form_withにモデルを渡すことで入力された値を自動的に代入してくれる -->
+  <h4>タイトル</h4>
+  <%= f.text_field:title %>
+  <h4>本文</h4>
+  <%= f.text_area:body %>
+  <h4>画像</h4>
+  <%= f.attachment_field:image %>
+  <%= f.submit '投稿' %>
+  <!-- URL'todolists'に飛ばす（postメソッドでcreateアクションが呼び出される）-->
+  <!-- routesに同じURLが記載する場合はどのようにルーティングを定義すればいいのか-->
+  <!-- routesは上から順？フォームオブジェクトが指定している？-->
+  <!-- 解決：HTTPメソッドのデフォルト値はメソッドで決まっている。form_withはPOSTまたはPATCH。 -->
+<% end %>
